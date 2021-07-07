@@ -54,7 +54,7 @@ def removeDuplicates1(head):
                 head = head.next
 
 # Method no 2 to remove duplicates
-def removeDuplicates2(self, head):
+def removeDuplicates2(head):
         # code here
         # return head after editing list
         uniq = set()
@@ -74,6 +74,6 @@ arr = [int(x) for x in input().split()]
 head = create_linked_list(arr)
 print("Initial unsorted linked list")
 print_linked_list(head)
-removeDuplicates1(head)
+removeDuplicates2(head)
 print("Final distinct unsorted linked list")
 print_linked_list(head)
