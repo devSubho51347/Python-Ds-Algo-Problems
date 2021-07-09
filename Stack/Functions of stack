@@ -1,0 +1,10 @@
+Stack has mainly 5 main features
+
+1. In stack entry and exit points are same
+2. Push operation - Insertion in a stack from top
+3. Pop operation - Deletion in a stack from top
+4. top - Access the top element of stack
+5. Size - Returns size of stack
+6. is Empty - Returns whether a stack is empty or not
+
+Stack is an abstract data type
