@@ -9,19 +9,23 @@ def minimum_bracket_reversal(str):
         while i < l:
             if i == 0:
                 li.append(str[i])
-            elif str[i] == "}" and li[-1] == "{":
-                li.pop()
+            elif str[i] == "}":
+                if len(li) == 0:
+                    li.append(str[i])
+                elif li[-1] == "{":
+                    li.pop()
+                else:
+                    li.append(str[i])
+
 
             else:
                 li.append(str[i])
             i = i + 1
 
         while j < len(li):
-            if li[j] == "}" and li[j + 1] == "{":
+            if li[j] != li[j + 1]:
                 count += 2
-            elif li[j] == "}" and li[j + 1] == "}":
-                count = count + 1
-            elif li[j] == "{" and li[j + 1] == "{":
+            else:
                 count = count + 1
             j = j + 2
 
