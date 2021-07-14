@@ -14,5 +14,6 @@ def reverse_stack(arr):
 
     return reversed_array
 
+
 arr = [int(x) for x in input().split()]
 print(*reverse_stack(arr))
