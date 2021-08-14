@@ -62,7 +62,7 @@ def printLevelWise(root):
 
 
 
-#Git token
+#Git token is good authentication
 # Method to print the binary tree
 
 def printBinaryTree(root):
