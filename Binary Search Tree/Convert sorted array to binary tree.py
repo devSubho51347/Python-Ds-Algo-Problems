@@ -13,7 +13,7 @@ class BinaryTreeNode:
         self.right = None
 
 
-# Converted sorted array to Binary tree
+# Converted sorted array to Binary tree and completed
 def arrToBst(list):
     if len(list) == 0:
         return None
