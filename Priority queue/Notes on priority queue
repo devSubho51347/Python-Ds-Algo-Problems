@@ -1,0 +1,8 @@
+Priority queue is basically a queue which satisfies two important properties
+1. Complete Binary Tree(CBT)
+2. Max HEAP/ MIN HEAP
+
+MAX HEAP -  A Binary tree in which the nodes priority is always greater than the priority of its children.
+MIN HEAP - A Binary tree in which the nodes pririty is always less than the priority of its children.
+
+Complete Binary Tree - It is a binary tree in which nodes are filled levelwise
