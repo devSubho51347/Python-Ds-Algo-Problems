@@ -21,7 +21,11 @@ def leafAtSameLevel(root,height = 0,li = []):
             else:
                 return 0
     left_tree = leafAtSameLevel(root.left,height = height + 1)
+    if left_tree == 0:
+        return 0
     right_tree = leafAtSameLevel(root.right, height = height + 1)
+    if right_tree == 0:
+        return 0
     if left_tree == 1 and right_tree == 1:
         return 1
     else:
