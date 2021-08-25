@@ -8,29 +8,15 @@ class BinaryTreeNode:
 
 #Method to check whether all the leaf nodes are present at the same level
 
-def leafAtSameLevel(root,height = 0,li = []):
-    if root is None:
-        return 1
-    if root.left is None and root.right is None:
-        if len(li) == 0:
-            li.append(height)
-            return 1
-        else:
-            if height == li[0]:
-                return 1
-            else:
-                return 0
-    left_tree = leafAtSameLevel(root.left,height = height + 1)
-    if left_tree == 0:
-        return 0
-    right_tree = leafAtSameLevel(root.right, height = height + 1)
-    if right_tree == 0:
-        return 0
-    if left_tree == 1 and right_tree == 1:
-        return 1
-    else:
-        return 0
 
+
+# Method to print a binary tree inorder
+def printInorder(root):
+    if root is None:
+        return
+    printInorder(root.left)
+    print(root.data, end = ",")
+    printInorder(root.right)
 
 
 
@@ -61,9 +47,4 @@ def buildLevelTree(levelorder):
 
 levelOrder = [int(i) for i in input().strip().split()]
 root = buildLevelTree(levelOrder)
-
-
-if leafAtSameLevel(root) == 1:
-    print("All the leaf nodes are present at the same level")
-else:
-    print("All the leaf nodes are not present at the same level")
+printInorder(root)
